@@ -1,0 +1,62 @@
+.main_information {
+    max-width: 100%;
+    backdrop-filter: blur(15px);
+  
+    height: 50%;
+    color: white;
+    border-radius: 5%;
+    margin: 0 0 1% 0;
+    padding: 5% 5% ;
+}
+
+.mainInput {
+    color: #fff;
+    background-color: transparent; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    height: 7%;
+    width: 95%;
+    opacity: 0.8; 
+    outline: none;
+    backdrop-filter: blur(5px);
+    margin: 0 0 20px 0;
+    font-family: sans-serif;
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.3s ease;
+  }
+
+.main_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 2% 0;
+}
+  
+
+.main_temp {
+    font-size: 80px;
+  }
+  
+.main_city {
+    font-size: 30px;
+}
+  
+
+.icons_favorite img{
+  width: 6%;
+  height: 6%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.mainInput:hover,
+.mainInput:focus {
+  box-shadow: 0 0 15px 0 #fff; 
+}
+
+.icons_favorite:hover  img {
+  transform: scale(1.2);
+}

@@ -1,38 +1,67 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+}
+
 .App {
-  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  animation: AApp 5s forwards;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 50px auto;
+  height: 40%;
+  width: 30%;
+  padding: 2%;
+  white-space: nowrap; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.block {
   color: white;
+  backdrop-filter: blur(80px);
+  border-radius: 5%;
+  margin: 0 0 1% 0;
+  padding: 5% 5% ;
 }
 
-.App-link {
-  color: #61dafb;
+.icons_menu {
+  height: 100%;
+  width: 15%;
+  display: inline-block;
+  color: white;
+  margin: 0 0 0 2%;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 1%; 
+  position: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icons_menu img { 
+  width: 2%;
+  position: fixed;
+  z-index: 1000;
+  transition: 1s ;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  )
+}
+
+
+.icons_menu:hover  img {
+  transform: scale(1.2);
 }

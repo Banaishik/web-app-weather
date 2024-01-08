@@ -1,0 +1,87 @@
+.block_menu {
+  height: 100%;
+  width: 15%;
+  display: block;
+  color: white;
+  margin: 0 0 0 2%;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  padding: 1%; 
+  position: fixed;
+  animation: slideInLeft 1s forwards;
+}
+
+.hide {
+  height: 100%;
+  width: 15%;
+  display: inline-block;
+  color: white;
+  margin: 0 0 0 2%;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  padding: 1%; 
+  position: fixed;
+  animation: slideOutLeft 0.3s forwards;
+
+}
+
+.close_favorite_window {
+  margin: 90% ;
+  cursor: pointer;
+  transition: transform 0.3s forwards;
+}
+
+.itemFavoriteCity {
+  display: block;
+  width: 88%;
+  height: 4%;
+  border-radius: 10px;
+  margin: 5% 0;
+  border : 1px solid #fff;
+}
+
+.itemFavoriteCity span {
+  margin: 1% 5%;
+  cursor: pointer;
+}
+
+.delete_favorite_city {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.itemFavoriteCity:hover span {
+  transform: scale(1.2);
+}
+
+.nameItemCity:hover {
+  transform: scale(1.2);
+}
+
+.close_favorite_window:hover {
+  transform: scale(1.2);
+}
+
+.delete_favorite_city:hover {
+  transform: scale(1.2);
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-110%); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}

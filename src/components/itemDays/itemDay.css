@@ -1,0 +1,54 @@
+.forecast_information {
+  max-width: 100%;
+  height: 65%;
+}
+
+.sample_day_weather {
+  position: relative;
+}
+
+
+.img_sky {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+
+.img_sky img {
+  width: 7%;
+  height: 10%;
+}
+
+.line_maxmin {
+  width: 20%;
+  height: 5px;
+  background-color: aqua;
+  border-radius: 15px;
+  position: relative;
+}
+
+.line_maxmin .max_temp {
+  position: absolute;
+  top: -10px;
+  left: 110%;
+}
+
+.line_maxmin .min_temp {
+  position: absolute;
+  top: -10px;
+  left: -40%;
+}
+
+
+.graph_maxmin {
+  display: inline-block ;
+
+}
+
+.graph_maxmin div {
+  display: inline-block;
+  position: absolute;
+
+  top: 35%;
+  left: 70%;
+} 
