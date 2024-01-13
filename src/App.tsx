@@ -5,8 +5,8 @@ import { ContainerBlock } from "./components/containerBlock/containerBlock.tsx";
 import { Load } from "./components/loading/loading.tsx";
 import { IMainBlock, IAllDay } from "./types/types.tsx";
 
-import reducer from "./reducer.tsx";
-import { initialState } from "./defaultMeaning.tsx";
+import reducer from "./store/reducer/reducer.tsx";
+import { initialState } from "./store/defaultValue/defaultMeaning.ts";
 
 import {
   actionSetForecastNow,
@@ -18,7 +18,7 @@ import {
   actionSetNameCurrent,
   actionFavoriteCities,
   actionSetSubmit
-} from "./components/actions/actions.tsx"
+} from "./store/actions/actions.ts"
 
 import './App.css';
 

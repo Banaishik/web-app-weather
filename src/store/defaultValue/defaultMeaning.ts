@@ -1,6 +1,5 @@
-import { IState } from "./reducer.tsx";
-import { IAllDay, ICity, IClouds, ICoord, IList, IMain, IMainBlock, IRain, ISys, IWeather, IWind} from "./types/types.tsx";
-
+import { IState } from "../../types/types.tsx";
+import { IAllDay, ICity, IClouds, ICoord, IList, IMain, IMainBlock, IRain, ISys, IWeather, IWind} from "../../types/types.tsx";
 
 const cityExample: ICity = {
     coord: {

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { MainBlock } from "../mainBlock/mainBlock.tsx";
-import { IState } from "../../reducer.tsx";
+import { IState } from "../../types/types.tsx";
 import ListHourForecast from "../itemHour/listHours.tsx";
 import { ListDaysForecast } from "../itemDays/ListDays.tsx";
 

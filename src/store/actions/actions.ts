@@ -1,4 +1,4 @@
-import { IAllDay, IMainBlock } from "../../types/types"
+import { IAllDay, IMainBlock } from "../../types/types.tsx"
 
 import {
     IForecastNow,
