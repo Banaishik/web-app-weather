@@ -9,7 +9,7 @@ import {
     IFavoriteCities,
     ISubmit,
     IState
-} from "./types/types"
+} from "../types/types"
 
 type IAction =
     | IForecastNow

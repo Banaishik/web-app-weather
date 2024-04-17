@@ -1,12 +1,11 @@
 import React, {FC, FormEvent, useEffect, useReducer, useState} from "react"
+import { ListFavoriteCity } from "../favoriteBlock/ListFavorite";
+import { ContainerBlock } from "../containerBlock/containerBlock";
+import { Load } from "../loading/loading";
+import { IMainBlock, IAllDay } from "../../types/types";
 
-import { ListFavoriteCity } from "./components/favoriteBlock/ListFavorite";
-import { ContainerBlock } from "./components/containerBlock/containerBlock";
-import { Load } from "./components/loading/loading";
-import { IMainBlock, IAllDay } from "./types/types";
-
-import reducer from "./reducer";
-import { initialState } from "./defaultMeaning";
+import reducer from "../../store/reducer";
+import { initialState } from "../../store/defaultState";
 
 import {
   actionSetForecastNow,
@@ -18,7 +17,7 @@ import {
   actionSetNameCurrent,
   actionFavoriteCities,
   actionSetSubmit
-} from "./components/actions/actions"
+} from "../../store/actions/actions"
 
 import './App.css';
 
@@ -184,15 +183,10 @@ const App : FC = () => {
               <source src={state.background} type="video/webm"/>
             </video>             
           </div>
-
-          {/* {
-            state.windowFavorites ? null : ( */}
               <div className="icons_menu" onClick={handleModalFavorite}>
                 <img src='https://icon-library.com/images/white-menu-icon/white-menu-icon-4.jpg' />
               </div>                  
             )
-          {/* } */}
-    
           <div className="App">
             <ListFavoriteCity
               windowFavorites={state.windowFavorites}

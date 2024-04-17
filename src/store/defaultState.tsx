@@ -1,4 +1,4 @@
-import { IAllDay, ICity, IClouds, ICoord, IList, IMain, IMainBlock, IRain, ISys, IWeather, IWind, IState} from "./types/types";
+import { IAllDay, ICity, IClouds, ICoord, IList, IMain, IMainBlock, IRain, ISys, IWeather, IWind, IState} from "../types/types";
 
 const cityExample: ICity = {
     coord: {
@@ -132,5 +132,5 @@ const initialState: IState = {
 };
 
 export {
-    initialState
+  initialState
 }
