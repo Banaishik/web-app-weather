@@ -1,6 +1,6 @@
 .block_menu {
   height: 100%;
-  width: 15%;
+  width: 300px;
   display: block;
   color: white;
   margin: 0 0 0 2%;
@@ -10,6 +10,7 @@
   padding: 1%; 
   position: fixed;
   animation: slideInLeft 1s forwards;
+  font-family: sans-serif;
 }
 
 .hide {
@@ -24,7 +25,6 @@
   padding: 1%; 
   position: fixed;
   animation: slideOutLeft 0.3s forwards;
-
 }
 
 .close_favorite_window {
@@ -34,9 +34,11 @@
 }
 
 .itemFavoriteCity {
-  display: block;
+  display: flex;
   width: 88%;
-  height: 4%;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 10px;
   margin: 5% 0;
   border : 1px solid #fff;
@@ -45,6 +47,7 @@
 .itemFavoriteCity span {
   margin: 1% 5%;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .delete_favorite_city {
@@ -73,15 +76,44 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-110%);
+    transform: translateX(-150%);
   }
 }
 
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-110%); 
+    transform: translateX(-150%); 
   }
   100% {
     transform: translateX(0); 
+  }
+}
+
+@media(max-width: 500px) {
+  .block_menu {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+
+@keyframes openModalWindowMobile {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+@keyframes closeModalWindowMobile {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
   }
 }

@@ -6,34 +6,35 @@ import { ItemHour } from "./itemHour";
 
 import "./itemHour.css"
 
-
 interface IDataHour {
     data : IAllDay,
 }
 
 const ListHourForecast : FC<IDataHour> = ({data}) => {
-
     const [dataHour, setDataHour] = useState<IList[]>([])    
 
     useEffect(() => {
-        setDataHour(data.list.slice(0, 7))
+        setDataHour(data.list.slice(0, 6))
     }, [data])
  
     return (
         <> 
+        
             <div className="information_hours block">
                 <Details details={`history weather`} />
 
                 <hr className="line_decoration"/>
-                {
-                    dataHour.map(item => {
-                        return <ItemHour  weather={item.weather}  time={item.dt} temperature={item.main.temp} />
-                    })   
-                }
+                <div  className="hours">
+                    {
+                        dataHour.map(item => {
+                            return <ItemHour  weather={item.weather}  time={item.dt} temperature={item.main.temp} />
+                        })   
+                    }                    
+                </div>
+
             </div>
         </>
     )
-
 }
 
 export default ListHourForecast

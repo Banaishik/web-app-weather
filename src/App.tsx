@@ -21,7 +21,6 @@ import {
 } from "./components/actions/actions"
 
 import './App.css';
-import { strict } from "assert";
 
 const App : FC = () => {
 
@@ -35,9 +34,9 @@ const App : FC = () => {
 
       const apiKey : string = 'f660a2fb1e4bad108d6160b7f58c555f';
 
-      const responseDays = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&days=5&appid=${apiKey}`)
-      const responseHour = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`)
-      const responseDayNow = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+      const responseDays = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&days=5&appid=${apiKey}`)
+      const responseHour = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`)
+      const responseDayNow = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
 
       const resultDayNow : IMainBlock = await responseDayNow.json()
       const resultHour : IAllDay = await responseHour.json()
@@ -185,6 +184,14 @@ const App : FC = () => {
               <source src={state.background} type="video/webm"/>
             </video>             
           </div>
+
+          {/* {
+            state.windowFavorites ? null : ( */}
+              <div className="icons_menu" onClick={handleModalFavorite}>
+                <img src='https://icon-library.com/images/white-menu-icon/white-menu-icon-4.jpg' />
+              </div>                  
+            )
+          {/* } */}
     
           <div className="App">
             <ListFavoriteCity
@@ -195,14 +202,6 @@ const App : FC = () => {
               favoriteCites={state.favoriteCity}
               handleModalFavorite={handleModalFavorite}
             />
-
-            {
-              state.windowFavorites ? null : (
-                <div className={`${state.windowFavorites ? "icons_none" : "icons_menu" }`} onClick={handleModalFavorite}>
-                  <img  src='https://icon-library.com/images/white-menu-icon/white-menu-icon-4.jpg' />
-                </div>                  
-              )
-            }
 
             <div className="container">
 

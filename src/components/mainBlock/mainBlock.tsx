@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import {IMainBlock} from "../../types/types";
 
 import './mainBlock.css';
+import { log } from "console";
 
 interface IData  {
   data : IMainBlock,
@@ -29,6 +30,7 @@ export const MainBlock : FC<IBlockMain> = ({data, favoriteCities, addCityToFavor
     try {
       if (favoriteCities.indexOf(data.name) === -1) {
         setIsFavorite(false)
+        
       } else {
         setIsFavorite(true)
       }      

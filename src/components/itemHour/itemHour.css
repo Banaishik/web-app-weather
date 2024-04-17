@@ -1,8 +1,15 @@
 
 .information_hours {
-    max-width: 100%;
-    height: 20%;
-    margin: 0 auto;
+  max-width: 100%;
+  height: 20%;
+  margin: 0 auto;
+
+}
+
+.hours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .line_decoration {

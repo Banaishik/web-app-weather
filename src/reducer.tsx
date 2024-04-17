@@ -84,6 +84,4 @@ const reducer = (state : IState, action : IAction ) => {
     }
 }
 
-
-
 export default reducer
